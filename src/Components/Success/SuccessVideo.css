@@ -1,0 +1,36 @@
+.swiper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  } 
+
+  .swiper-pagination {
+    bottom: 5px; /* Position the dots below the slider */
+    text-align: center;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #222121; /* Default color of the dots */
+    border-radius: 50%;
+    margin: 0 3px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, background 0.3s ease;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #252524; /* Color of the active dot */
+    opacity: 1;
+  }

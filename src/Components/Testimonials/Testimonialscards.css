@@ -1,0 +1,102 @@
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+      transition: transform 0.5s ease-in-out; /* Adjust duration for smooth, slower transitions */
+  }
+  
+  .carousel-slide {
+    flex: 0 0 50%; /* Adjust slide width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .carousel-slide img {
+    width: 250px;
+    height: 220px;
+    border-radius: 20px;
+    /* margin: 5px; */
+  }
+  
+  /* .carousel-slide h3 {
+    font-size: 1.4rem;
+    color:white;
+  } */
+  
+  .slanting {
+    transform: rotate(11deg);
+    transition: transform 0.5s ease; 
+    margin-top: 60px;
+    margin-left: 35px;
+  }
+  .stars-container {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 24px;
+    color: gold; /* Yellow color */
+    margin-right: 5px;
+  }
+  @media (max-width: 600px) {
+    .carousel-slide {
+      flex: 0 0 100%; /* Two slides per view on medium screens */
+    }
+  
+    .carousel-slide img {
+      max-width: 300px;
+    }
+  
+    .star {
+      font-size: 28px;
+    }
+  }
+
+  /* Medium screens (e.g., tablets) */
+  @media (min-width: 768px) {
+    .carousel-slide {
+      flex: 0 0 60%; /* Two slides per view on medium screens */
+    }
+  
+    .carousel-slide img {
+      max-width: 220px;
+    }
+  
+    .star {
+      font-size: 22px;
+    }
+  }
+  
+  /* Large screens (e.g., desktops) */
+  @media (min-width: 1024px) {
+    .carousel-slide {
+      flex: 0 0 33.33%; /* Three slides per view on large screens */
+    }
+  
+    .carousel-slide img {
+      max-width: 250px;
+    }
+  
+    .star {
+      font-size: 24px;
+    }
+  
+    .slanting {
+      margin-top: 60px;
+      margin-left: 25px;
+    }
+  }
+  
+  
