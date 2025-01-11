@@ -184,13 +184,13 @@ function ContactForm() {
                       <option value="" disabled>
                         Select your location
                       </option>
-                      <option value="CHN">Coimbatore</option>
-                      <option value="CLT">Chennai</option>
-                      <option value="TVM">Tambaram</option>
-                      <option value="ATL">Trichy</option>
-                      <option value="KLM">Salem</option>
-                      <option value="KNR">Madurai</option>
-                      <option value="TCR">Tirunelveli</option>
+                      <option value="CBE">Coimbatore</option>
+                      <option value="CNI">Chennai</option>
+                      <option value="TBM">Tambaram</option>
+                      <option value="TCY">Trichy</option>
+                      <option value="SAL">Salem</option>
+                      <option value="MDI">Madurai</option>
+                      <option value="TEN">Tirunelveli</option>
                     </Field>
                     <span className="absolute text-black bottom-3 right-4 flex items-center pointer-events-none">
                       <FaCaretDown />

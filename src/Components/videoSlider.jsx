@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import left from "../../src/assets/vectors/left.png"
@@ -19,7 +19,56 @@ const VideoSlider = () => {
     { src: video2, poster: poster2 },
     { src: video3, poster: poster3 },
   ];
-    const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
+  const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
+  const videoRefs = useRef([]);
+  const playPauseVideos = () => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        const videoRect = video.getBoundingClientRect();
+        const isVisible =
+          videoRect.top >= 0 &&
+          videoRect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight);
+        if (isVisible && positionIndexes.indexOf(0) === index) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = videoRefs.current.findIndex(
+            (video) => video === entry.target
+          );
+          if (entry.isIntersecting && index === positionIndexes.indexOf(0)) {
+            entry.target.play();
+          } else {
+            entry.target.pause();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    videoRefs.current.forEach((video) => {
+      if (video) observer.observe(video);
+    });
+
+    return () => {
+      videoRefs.current.forEach((video) => {
+        if (video) observer.unobserve(video);
+      });
+    };
+  }, [positionIndexes]);
+
+  useEffect(() => {
+    playPauseVideos();
+  }, [positionIndexes]);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) =>
@@ -40,8 +89,8 @@ const VideoSlider = () => {
   };
 
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNext, // Swipe left to go to the next video
-    onSwipedRight: handleBack, // Swipe right to go to the previous video
+    onSwipedLeft: handleNext, 
+    onSwipedRight: handleBack, 
     preventScrollOnSwipe: true,
   });
 
@@ -66,23 +115,27 @@ const VideoSlider = () => {
 
       {/* Video Carousel */}
       <div className="w-full md:w-5/12 flex justify-center items-center relative">
-  {videos.map((video, index) => (
-    <motion.video
-      key={index}
-      src={video.src}
-      className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[640px] ml-[20px]"
-      initial="center"
-      animate={Object.keys(imageVariants)[positionIndexes[index]]}
-      variants={imageVariants}
-      transition={{ duration: 0.5 }}
-      controls
-      playsInline
-      poster={video.poster}
-      muted
-      preload="auto"
-    />
-  ))}
-</div>
+        {videos.map((video, index) => {
+          return (
+            <motion.video
+              key={index}
+              src={video.src}
+              className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[640px] ml-[20px]"
+              initial="center"
+              animate={Object.keys(imageVariants)[positionIndexes[index]]}
+              variants={imageVariants}
+              transition={{ duration: 0.5 }}
+              controls
+              // autoPlay
+              playsInline
+              poster={video.poster}
+              muted
+              preload="auto"
+              ref={(el) => (videoRefs.current[index] = el)} // Store video ref
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -23,9 +23,9 @@ const StickOnContents = () => {
     cycleStates();
 
     // Trigger popup after 5 seconds
-    const popupTimer = setTimeout(() => {
-      setShowPopup(true);
-    }, 3000);
+    // const popupTimer = setTimeout(() => {
+    //   // setShowPopup(true);
+    // }, 3000);
 
     return () => {
       clearTimeout(cycleStates);
