@@ -18,7 +18,7 @@ const Footer = () => {
             </span>
             <span className="flex items-center gap-2">
               <FaPhoneSquareAlt className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span>+91 9846770771</span>
+              <span>+91 90929 46664</span>
             </span>
             <span className="flex items-center gap-2">
               <AiOutlineGlobal className="w-5 h-5 sm:w-6 sm:h-6" />
