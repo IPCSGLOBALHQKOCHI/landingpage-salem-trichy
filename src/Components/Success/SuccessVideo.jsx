@@ -1,97 +1,3 @@
-// import React, { Fragment } from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// import "swiper/css";
-// import "swiper/css/effect-coverflow";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-// import "./SuccessVideo.css";
-
-// import { EffectCoverflow, Pagination } from "swiper/modules";
-
-// const slides = [
-//   {
-//     video: "https://www.instagram.com/reel/DCB3QsjCr-O/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DC7AH-azDgs/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DCWf2dMCS9Y/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DCB3QsjCr-O/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DC7AH-azDgs/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DCWf2dMCS9Y/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DByZfw_CSyP/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/p/DB8X-NQCIJx/embed",
-//   },
-//   {
-//     video: "https://www.instagram.com/reel/DCWf2dMCS9Y/embed",
-//   },
-// ];
-
-// const SuccessSlider = () => {
-//   return (
-//     <div className="mt-0">
-//       <Swiper
-//         effect={"coverflow"}
-//         centeredSlides={true}
-//         slidesPerView={2}
-//         loop={true}
-//         spaceBetween={220}
-//         coverflowEffect={{
-//           rotate: 0,
-//           stretch: 80,
-//           depth: 200,
-//           modifier: 1,
-//         }}
-//         modules={[EffectCoverflow, Pagination]}
-//         className="custom-swiper-1"
-//         pagination={{ clickable: true }}
-//         simulateTouch={false} // Disable drag option
-//       >
-//         {slides.map(({ video }, index) => (
-//           <Fragment key={index}>
-//             <SwiperSlide className="custom-slide-1 flex flex-col gap-10 rounded-2xl justify-center text-center min-h-[450px] md:min-h-[650px]">
-//               <iframe
-//                 src={`${video}`}
-//                 className="custom-iframe-1 w-auto h-[600px] rounded-xl"
-//                 frameBorder="0"
-//                 allow="autoplay; fullscreen"
-//                 scrolling="no"
-//                 title={`Instagram Video ${index + 1}`}
-//               ></iframe>
-//             </SwiperSlide>
-//           </Fragment>
-//         ))}
-//       </Swiper>
-//     </div>
-//   );
-// };
-
-// export default SuccessSlider;
-
 
 import React, { useState } from "react";
 import { videoSlides } from "../../Slides/ConstantSlides";
@@ -109,7 +15,6 @@ const SuccessSlider = () => {
     return <div>No videos available</div>;
   }
 
-  // Handlers for navigation
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       (prevIndex - 1 + totalSlides) % totalSlides
@@ -120,23 +25,21 @@ const SuccessSlider = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
   };
 
-  // Calculate slides to display
   const visibleSlideIndexes = Array.from(
     { length: visibleSlides },
     (_, i) => (currentIndex + i) % totalSlides
   );
 
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNext, // Swipe left to go to the next image
-    onSwipedRight: handlePrev, // Swipe right to go to the previous image
-    preventScrollOnSwipe: true, // Prevent scrolling while swiping
-    trackMouse: true, // Enable mouse swipe events for desktop
+    onSwipedLeft: handleNext, 
+    onSwipedRight: handlePrev, 
+    preventScrollOnSwipe: true, 
+    trackMouse: true, 
   });
 
   return (
     <div className="relative w-full overflow-hidden"
     {...swipeHandlers}>
-      {/* Navigation Buttons */}
       <button
         onClick={handlePrev}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-600 bg-opacity-45 p-2 rounded-full shadow"
@@ -150,7 +53,6 @@ const SuccessSlider = () => {
         <img src={right} alt="Next" className="text-white w-5 h-5"/>
       </button>
 
-      {/* Slides */}
       <div className="flex gap-4 transition-transform duration-300 ease-in-out">
         {visibleSlideIndexes.map((index) => (
           <div

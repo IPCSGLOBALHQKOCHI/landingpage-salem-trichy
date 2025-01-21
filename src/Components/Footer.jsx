@@ -14,11 +14,11 @@ const Footer = () => {
           <p className="text-center lg:text-left mb-4 sm:mb-6 flex flex-col gap-2 text-sm sm:text-base">
             <span className="flex items-center gap-2">
               <IoIosMail className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span>Info@ipcsglobal.com</span>
+              <span>salem@ipcsglobal.com</span>
             </span>
             <span className="flex items-center gap-2">
               <FaPhoneSquareAlt className="w-5 h-5 sm:w-6 sm:h-6" />
-              <span>+91 90929 46664</span>
+              <span>+91 8606026664</span>
             </span>
             <span className="flex items-center gap-2">
               <AiOutlineGlobal className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -71,7 +71,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links Section */}
         <div className="lg:w-60">
           <h4 className="text-lg sm:text-xl font-semibold text-center lg:text-left text-black mb-4">
             Quick Links
@@ -94,7 +93,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Section */}
         <div className="lg:w-2/4">
           <h4 className="text-lg sm:text-xl font-semibold text-center lg:text-left text-black mb-4">
             Our Locations

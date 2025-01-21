@@ -20,21 +20,18 @@ function QuestionSection() {
     { question: "How do you assist with job placements?", answer: "Our team assists students in securing placements and providing support throughout the process." }
   ];
 
-  // State to track open status for the left and right dropdown sections
   const [leftOpenStates, setLeftOpenStates] = useState(Array(leftQuestions.length).fill(false));
   const [rightOpenStates, setRightOpenStates] = useState(Array(rightQuestions.length).fill(false));
 
-  // Toggle function for individual dropdowns in each section
   const toggleLeftDropdown = (index) => {
-    const newStates = Array(leftQuestions.length).fill(false); // Reset all to false
-    newStates[index] = !leftOpenStates[index]; // Toggle the selected one
+    const newStates = Array(leftQuestions.length).fill(false); 
+    newStates[index] = !leftOpenStates[index]; 
     setLeftOpenStates(newStates);
   };
   
   const toggleRightDropdown = (index) => {
-    const newStates = Array(rightQuestions.length).fill(false); // Reset all to false
-    newStates[index] = !rightOpenStates[index]; // Toggle the selected one
-    setRightOpenStates(newStates);
+    const newStates = Array(rightQuestions.length).fill(false); 
+    newStates[index] = !rightOpenStates[index]; 
   };  
   return (
     <div className="py-10 px-0">

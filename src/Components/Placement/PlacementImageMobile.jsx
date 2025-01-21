@@ -58,17 +58,6 @@ const PlacementImageMobile = () => {
                 index === 0 ? "w-9/12  " : index === 1 ? "w-3/12" : "w-2/12"
               }`}
             >
-              {/* <div
-                className="absolute inset-0 flex flex-col z-50 content"
-                style={index === 0 ? activeContentStyle : contentStyle}
-              >
-                <div className="name" style={index === 0 ? { fontSize: "28px",marginLeft:"30px", marginTop:"290px", fontWeight: 600, textTransform: "uppercase" } : {}}>
-                  {slide.name}
-                </div>
-                <div className="des" style={descriptionStyle}>
-                  {slide.Position}
-                </div>
-              </div> */}
               <img
                 src={slide.imageUrl}
                 alt={slide.name}

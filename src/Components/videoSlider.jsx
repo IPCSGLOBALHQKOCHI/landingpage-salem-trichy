@@ -97,7 +97,6 @@ const VideoSlider = () => {
   return (
     <div className="relative flex items-center justify-center "
     {...swipeHandlers}>
-      {/* Navigation Arrows */}
       <button
   onClick={handleNext}
   className="absolute hidden sm:hidden md:hidden lg:block  left-4 top-1/2 transform -translate-y-1/2 bg-gray-600 bg-opacity-25 p-2 sm:p-3 rounded-full z-10 
@@ -111,16 +110,13 @@ const VideoSlider = () => {
   sm:mr-[2px] md:mr-[8px] lg:mr-[10px] xl:mr-[12px] mt-[830px] sm:mt-[330px] md:mt-[330px] lg:mt-[330px] xl:mt-[330px] "
 >
 <img src={right} alt="Previous" className="text-white w-3 h-3" /></button>
-
-
-      {/* Video Carousel */}
       <div className="w-full md:w-5/12 flex justify-center items-center relative">
         {videos.map((video, index) => {
           return (
             <motion.video
               key={index}
               src={video.src}
-              className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[640px] ml-[20px]"
+              className="rounded-[30px] absolute w-[220px] sm:w-[200px] md:w-3/5 lg:w-3/5 xl:w-3/5 sm:ml-[360px] md:ml-[480px] lg:ml-[630px] xl:ml-[700px] mt-[1720px] lg:mt-[720px] md:mt-[700px] sm:mt-[640px] xl:mt-[690px] ml-[20px]"
               initial="center"
               animate={Object.keys(imageVariants)[positionIndexes[index]]}
               variants={imageVariants}
@@ -131,7 +127,7 @@ const VideoSlider = () => {
               poster={video.poster}
               muted
               preload="auto"
-              ref={(el) => (videoRefs.current[index] = el)} // Store video ref
+              ref={(el) => (videoRefs.current[index] = el)} 
             />
           );
         })}

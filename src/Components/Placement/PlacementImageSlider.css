@@ -44,7 +44,6 @@
     }
     .swiper-slide-next {
       transition: transform 3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      /* margin-left:25px; */
     }
     
     .slider-controler {
@@ -62,23 +61,22 @@
 
     .swiper-slide-prev img,
   .swiper-slide-next img {
-    width: 230px !important; /* Adjust the width as desired */
+    width: 230px !important; 
     height: 400px !important; 
   }
 
 
   
   .swiper-slide {
-    width: 350px !important; /* Default width for all images */
+    width: 350px !important; 
     height: 480px !important;
     border-radius: 25px;
-    /* transition: transform 0.5s ease-in-out; */
     margin-bottom: 30px;
     margin-top: 30px;
   }
   iframe {
     overflow: hidden;
-    white-space: nowrap; /* Prevent horizontal scrolling */
+    white-space: nowrap; 
   }
   @media (max-width: 500px) {
     .swiper_container {
@@ -182,11 +180,10 @@
 
   .swiper-button-next,
 .swiper-button-prev {
-  /* background-color: #000;  */
-  color: #fff; /* Arrow color */
-  width: 50px; /* Arrow size */
+  color: #fff;
+  width: 50px; 
   height: 50px;
-  border-radius: 50%; /* Circle shape for arrows */
+  border-radius: 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,42 +191,40 @@
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 24px; /* Size of the arrow icon */
-  color: #fff; /* Arrow color */
+  font-size: 24px; 
+  color: #fff; 
 }
 
 
 
 .swiper-pagination {
-    bottom: 10px; /* Adjust position */
+    bottom: 10px; 
     margin-left: 40%;
   }
   
   .swiper-pagination-bullet {
-    background-color: #ffffff; /* Default color for inactive dots */
+    background-color: #ffffff; 
     width: 10px;
     height: 10px;
-    border-radius: 50%; /* Round shape for dots */
+    border-radius: 50%;
   }
     
   .swiper-pagination-bullet:not(:first-child) {
-    margin-left: 10px; /* Space between the dots */
+    margin-left: 10px; 
   }
   
-  /* Limit to 3 dots */
   .swiper-pagination-bullet:nth-child(n+5) {
-    display: none; /* Hide dots after the 3rd one */
+    display: none; 
   }
 
 
 
   .swiper-slide .content {
-    opacity: 0; /* Hidden by default */
-    /* transition: opacity 0.3s ease; */
+    opacity: 0; 
   }
   
   .swiper-slide-active .content {
-    opacity: 1; /* Visible only for active slide */
+    opacity: 1; 
   }
   
   .swiper-slide-active .content .name {

@@ -18,7 +18,6 @@ function QuestionSection() {
           All you need to know
         </h5>
       </div>
-      {/* Render the Questions Component */}
       <div className="mt-2">
         <Questions />
       </div>

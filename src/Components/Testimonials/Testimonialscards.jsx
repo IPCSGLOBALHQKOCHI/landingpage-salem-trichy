@@ -14,11 +14,10 @@ const TestimonialsCards = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    }, 4000); // Match with the transition duration for smoothness
-    return () => clearInterval(interval); // Clean up interval on component unmount
+    }, 4000); 
+    return () => clearInterval(interval); 
   }, []);
 
-  // Visible slides logic
   const visibleSlides = [
     cards[currentIndex],
     cards[(currentIndex + 1) % cards.length],
@@ -38,10 +37,7 @@ const TestimonialsCards = () => {
           padding: '20px',
           color: 'white',
         }}>
-          {/* Heading */}
           <h3 className="text-white font-semibold text-xl mb-4"dangerouslySetInnerHTML={{ __html: card.heading }}></h3>
-
-          {/* Image */}
           <div className="w-full rounded-md">
             <img
               src={card.image}
@@ -50,8 +46,6 @@ const TestimonialsCards = () => {
               loading='lazy'
             />
           </div>
-
-          {/* Name */}
           <p className="text-white font-medium text-md mt-2">{card.name}</p>
           <div className="stars-container">
           <div> <span className="star">★★★★★</span></div>

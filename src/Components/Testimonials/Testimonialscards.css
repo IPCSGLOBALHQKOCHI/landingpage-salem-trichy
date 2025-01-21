@@ -10,11 +10,11 @@
   
   .carousel-wrapper {
     display: flex;
-      transition: transform 0.5s ease-in-out; /* Adjust duration for smooth, slower transitions */
+      transition: transform 0.5s ease-in-out;
   }
   
   .carousel-slide {
-    flex: 0 0 50%; /* Adjust slide width */
+    flex: 0 0 50%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,13 +27,9 @@
     width: 250px;
     height: 220px;
     border-radius: 20px;
-    /* margin: 5px; */
   }
   
-  /* .carousel-slide h3 {
-    font-size: 1.4rem;
-    color:white;
-  } */
+ 
   
   .slanting {
     transform: rotate(11deg);
@@ -47,12 +43,12 @@
   
   .star {
     font-size: 24px;
-    color: gold; /* Yellow color */
+    color: gold; 
     margin-right: 5px;
   }
   @media (max-width: 600px) {
     .carousel-slide {
-      flex: 0 0 100%; /* Two slides per view on medium screens */
+      flex: 0 0 100%; 
     }
   
     .carousel-slide img {
@@ -67,7 +63,7 @@
   /* Medium screens (e.g., tablets) */
   @media (min-width: 768px) {
     .carousel-slide {
-      flex: 0 0 60%; /* Two slides per view on medium screens */
+      flex: 0 0 60%; 
     }
   
     .carousel-slide img {
@@ -82,7 +78,7 @@
   /* Large screens (e.g., desktops) */
   @media (min-width: 1024px) {
     .carousel-slide {
-      flex: 0 0 33.33%; /* Three slides per view on large screens */
+      flex: 0 0 33.33%;
     }
   
     .carousel-slide img {

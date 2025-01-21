@@ -7,7 +7,6 @@ import PartnersImage from "../../src/assets/vectors/Vector (3).png"
 function Counts() {
   return (
     <div className="w-full !px-4 h-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-20 mb-8 sm:px-8 md:px-16 lg:px-32 xl:px-40">
-    {/* Presence Across Country Card */}
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
@@ -24,7 +23,6 @@ function Counts() {
       </h6>
     </div>
   
-    {/* Industrial Projects Card */}
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
@@ -41,7 +39,6 @@ function Counts() {
       </h6>
     </div>
   
-    {/* Trained Professionals Card */}
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img
@@ -58,7 +55,6 @@ function Counts() {
       </h6>
     </div>
   
-    {/* Corporate Partners Card */}
     <div className="w-full h-[275px] bg-[#CFCFCF66] rounded-2xl">
       <div className="bg-[#CBEADB] w-24 h-24 mt-6 mx-auto rounded-full flex justify-center items-center">
         <img

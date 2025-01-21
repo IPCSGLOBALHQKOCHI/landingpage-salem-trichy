@@ -2,9 +2,9 @@ import React from "react";
 
 function Card({ bgImage, Image, title1, description }) {
   return (
-    <div className="mt-14 xl:ml-8 md:ml-4 xl:mr-0 lg:ml-8 lg:mr-4 md:mr-3 sm:ml-10 sm:mr-10 mr-5 ml-5  gap-0   lg:gap-2 xl:gap-4 xl:w-[24rem] lg:w-[20rem]">
+    <div className="mt-14 xl:ml-4 md:ml-3 xl:mr-0 lg:ml-4 lg:mr-4 md:mr-3 sm:ml-10 sm:mr-10 mr-4 ml-4  gap-0   lg:gap-2 xl:gap-4 xl:w-[93%] lg:w-[90%]">
       <div
-        className="relative bg-cover bg-center rounded-2xl shadow-lg sm:h-[400px] h-[330px] "
+        className="relative bg-cover bg-center rounded-2xl shadow-lg sm:h-[399px] h-[330px] "
         style={{
           backgroundImage: `url(${bgImage})`,
         }}
@@ -18,7 +18,7 @@ function Card({ bgImage, Image, title1, description }) {
         <div className="absolute flex ">
           <div className="flex flex-col w-[48%]">
             <div className="mt-[40%] ml-6  ">
-              <h2 className="text-yellow-400 xs:font-bold sm:font-extrabold font-extrabold xs:text-xl sm:text-3xl text-2xl">
+              <h2 className="text-yellow-400 xs:font-bold sm:font-bold font-extrabold xs:text-xl sm:text-3xl text-2xl">
                 {title1}
               </h2>
             </div>
@@ -47,7 +47,7 @@ function Card({ bgImage, Image, title1, description }) {
           <img
             src={Image}
             alt={title1}
-            className="self-end right-44 w-[52%] sm:h-[400px] h-[330px] "
+            className="self-end right-44 w-[52%] sm:h-[350px] mt-12 h-[330px] "
           />
         </div>
       </div>

@@ -26,30 +26,21 @@ const IntroPage = () => {
           "linear-gradient(to right, #001F11 0%, #002614 15%, #00361D 28%, #00351C 44%, #003F23 57%, #004F29 65%, #004F2A 79%, #00582E 92%)",
       }}
     >
-      {/* Wrapper div for the main content */}
       <div className="relative">
-        {/* Background image */}
         <img
           src={BgLogo}
           alt="Background"
           className="absolute top-[-15px] left-[-15px] opacity-10 w-[240px] sm:w-[280px] md:w-[390px] lg:w-[500px] xl:w-[580px] max-width-full"
         />
-
-        {/* Second VideoSlider: Visible on sm and smaller */}
         <div className="block md:hidden sm:block lg:hidden xl:hidden">
           <VideoSlider />
         </div>
-
-        {/* Left section with the main content */}
         <div className="w-full md:w-1/2 flex flex-col items-start relative">
-  {/* Main Image */}
   <img
     src={MainImage}
     alt="Tech World"
     className="absolute top-0 left-0 z-[100] opacity-100 mt-12 xl:mt-10 ml-32 sm:mt-14 sm:ml-14 md:mt-14 md:ml-20 w-28 sm:w-52 md:w-auto xs:ml-28"
   />
-
-  {/* Title and Subtitles */}
   <h1 className="absolute whitespace-nowrap text-center  text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl  font-bold text-yellow-400 mt-32 sm:mt-44 md:mt-40 lg:mt-40 xl:mt-36 ml-12 sm:ml-14 md:ml-20 lg:ml-20 xl:ml-24 xs:ml-10 xs:text-[42px]">
     World’s No.1
   </h1>
@@ -64,9 +55,6 @@ const IntroPage = () => {
     demands of Today’s Industries
   </h4>
 </div>
-
-
-        {/* Features section */}
         <div className="absolute mt-[440px] sm:mt-[400px] md:mt-[420px] xl:mt-[400px] lg:mt-[440px] text-right lg:text-right ml-8 xl:ml-24 md:ml-20 lg:ml-20 sm:ml-14 mx-5 sm:mx-10 md:mx-20">
           <div className="grid grid-cols-1 gap-4 sm:gap-5 md:gap-6 lg:gap-4">
             {features.map((feature, index) => (
@@ -83,8 +71,6 @@ const IntroPage = () => {
             ))}
           </div>
         </div>
-
-        {/* Explore Courses Button */}
         <button   onClick={() => document.getElementById("contactSection").scrollIntoView({ behavior: "smooth" })}
          className="absolute flex items-center space-x-14 pr-2 rounded-full py-[10px] pl-10  text-black font-semibold text-lg mt-[570px] sm:mt-[540px] md:mt-[600px] lg:mt-[610px] xl:mt-[550px] ml-16 xl:ml-24 md:ml-20 sm:ml-14 lg:ml-24 xs:ml-9 xs:mt-[590px]"
          style={{
@@ -95,8 +81,6 @@ const IntroPage = () => {
             <FiArrowRight className="w-7 h-7 ml-1 mt-1 text-green-900" />
           </div>
         </button>
-
-        {/* Video Slider section (only for larger screens, below the left section) */}
         <div>
           <div>
             <VideoSlider />
@@ -121,7 +105,6 @@ const IntroPage = () => {
   /> */}
       </div>
 
-      {/* Background logo */}
       <div className="relative">
         <img
           src={BgLogo2}
